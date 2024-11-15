@@ -1,0 +1,27 @@
+{
+    "scopeName": "source.minic",
+    "patterns": [
+        {"include": "#keywords"},
+        {"include": "#functions"}
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(return|struct|union|enum|true|false|typedef|if|while|for|do|continue|break|sizeof|module|typedef|long|short|signed|unsigned|volatile|static|extern|const)\\b",
+                    "name": "keyword.control.minic"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\s*(?=\\()",
+                    "name": "entity.name.function.minic"
+                }
+            ]
+        }
+    },
+    "fileTypes": ["mc"],
+    "name": "miniC"
+}
